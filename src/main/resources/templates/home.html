@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Simple Java Website</title>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body { font-family: sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; background-color: #f0f2f5; margin: 0; }
+        .container { background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); text-align: center; }
+        h1 { color: #2c3e50; }
+        p { color: #7f8c8d; }
+        .time { font-weight: bold; color: #27ae60; margin-top: 1rem; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 th:text="'Welcome to ' + ${appName}">Welcome</h1>
+        <p>This page is served by a containerized Java Spring Boot application.</p>
+        <div class="time" th:text="'Server Time: ' + ${serverTime}">Time</div>
+    </div>
+</body>
+</html>
